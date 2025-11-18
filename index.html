@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Mexa - Comida Típica Mexicana</title>
+    <meta name="description" content="Restaurante de comida típica mexicana. Enchiladas, pozole, chilaquiles, cochinita pibil y más platillos tradicionales.">
+    <meta name="keywords" content="comida mexicana, restaurante, pozole, enchiladas, chilaquiles, cochinita pibil">
+    <meta property="og:title" content="Casa Mexa - Comida Típica Mexicana">
+    <meta property="og:description" content="Disfruta de los mejores platillos típicos mexicanos en nuestro restaurante">
+    <meta name="twitter:title" content="Casa Mexa - Comida Típica Mexicana">
+    <meta name="twitter:description" content="Disfruta de los mejores platillos típicos mexicanos en nuestro restaurante">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #C41E3A;
+            --secondary-color: #FF8C00;
+            --accent-color: #FFD700;
+            --text-dark: #2D1B1B;
+            --text-light: #FFFFFF;
+            --bg-light: #FFF8F0;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+    }
+
+    @layer components {
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(196, 30, 58, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+        }
+
+        .menu-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .star-rating {
+            color: #FFD700;
+        }
+    }
+
+    @layer utilities {
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/scrollUtils.js"></script>
+    <script type="text/babel" src="utils/cartContext.js"></script>
+    <script type="text/babel" src="components/ReservationModal.js"></script>
+    <script type="text/babel" src="components/PaymentModal.js"></script>
+    <script type="text/babel" src="components/CartPanel.js"></script>
+    <script type="text/babel" src="components/Navbar.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/MenuCard.js"></script>
+    <script type="text/babel" src="components/PackageCard.js"></script>
+    <script type="text/babel" src="components/PopularSection.js"></script>
+    <script type="text/babel" src="components/PackagesSection.js"></script>
+    <script type="text/babel" src="components/SpecialOffers.js"></script>
+    <script type="text/babel" src="components/MenuSection.js"></script>
+    <script type="text/babel" src="components/HistorySection.js"></script>
+    <script type="text/babel" src="components/ReviewsSection.js"></script>
+    <script type="text/babel" src="components/WhatsAppButton.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
